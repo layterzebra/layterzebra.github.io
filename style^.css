@@ -55,6 +55,7 @@ body::before {
   opacity: 0.4;
 }
 
+
 @keyframes animacja-tla {
   from {
     background-position: 100% 0;
@@ -166,6 +167,15 @@ a {
   height: 100%;
 }
 
+.czciona p {
+  font-size: 84px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-family: 'Callista', sans-serif;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -182,13 +192,4 @@ a {
 .box:hover ~ .overlay {
   opacity: 0.5; 
   pointer-events: auto; 
-}
-
-.czciona p {
-  font-size: 84px;
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  font-family: 'Callista', sans-serif;
 }

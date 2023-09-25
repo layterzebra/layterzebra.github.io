@@ -1,0 +1,49 @@
+.czcionka2{
+    text-indent: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:  50px;
+    color: wheat;
+}
+.czcionka3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size:100px;
+    color: yellow;
+}
+.tlo2{
+    background: url(tlo2.jpg)
+}
+.czcionka4{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 100px;
+    color: black;
+}
+.czcionka5{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+    color: turquoise;
+}
+.czcionka6{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 70px;
+    color: black;
+}
+.czcionka7{
+    font: bold 5em Arial, sans-serif;
+    color: #0d3967;
+    text-shadow: #1de269 1px 1px 0,
+                           #1de269 3px 3px 0, 
+                           #1de269 5px 5px 0;
+   text-align: center;
+}
+
+table, th, td {
+    border: 4px solid black;
+    font-size: 35px; font-family: Verdana; color: #000000;
+}
+table{
+    margin-top: 10%;
+}

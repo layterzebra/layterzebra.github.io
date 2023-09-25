@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Far Cry 5</title>
+<meta name="language" content="PL">
+<meta name="author" content="Patryk Balicki">
+<link href="css.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="xikona.png">
+<style>
+.fa {
+padding: 20px;
+font-size: 100px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+color: white;
+background: black;
+}
+.fa:visited{
+color: white;
+}
+</style>
+</head>
+<body div class="body1">
+<div class="baner">
+<img src="baner.png" alt="baner">
+</div>
+<div id="tlo_pierwsze" class="kontener">
+</div>
+<div id="media">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-twitch"></a>
+<div class="container1">
+    <a class="button" href="html.txt">Kod CSS</a>
+    <a class="button" href="css.txt">Kod HTML</a>
+  </div>
+</div>
+<div id="tlo_drugie" class="kontener">
+</div>
+<div class="stopka">
+    <div class="link">
+        <div class="wrapper">
+            <div class="links">
+        <a href="1x.html">Historia</a>
+        <a href="2x.html">Postacie</a>
+        <a href="3x.html">Zakończenia</a>
+        <a href="4x.html">Recenzja</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+
+Ogólny kod podstron:
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device=width, initial=scale1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="xikona.png">
+    <title>Historia</title>
+</head>
+<body background="bck5.jpg">
+
+    <a class="back-button" href="index7.html">Powrót</a>
+    
+    <table class="container">
+     <tr>
+     <td class="box">
+        <div class="font"><div class="text">
+        <p>
+       Tutaj jest tekst
+      </p></div></td></tr></div></div></div></td>
+    </table>
+    
+</body>
+</html>

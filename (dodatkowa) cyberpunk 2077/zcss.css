@@ -1,0 +1,697 @@
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #831313;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+.cyber-glitch-3 {
+animation: cyber-glitch-3 1s linear infinite;
+}
+
+@keyframes cyber-glitch-3 {
+0% {
+visibility: visible
+}
+
+49% {
+visibility: visible
+}
+
+50% {
+visibility: hidden
+}
+
+100% {
+visibility: hidden
+}
+}
+
+.cyber-glitch-4 {
+animation: cyber-glitch-4 5s linear infinite
+}
+
+@keyframes cyber-glitch-4 {
+0% {
+visibility: visible
+}
+
+1% {
+visibility: hidden
+}
+
+2% {
+visibility: hidden
+}
+
+3% {
+visibility: visible
+}
+
+20% {
+visibility: visible
+}
+
+21% {
+visibility: hidden
+}
+
+24% {
+visibility: hidden
+}
+
+25% {
+visibility: visible
+}
+
+40% {
+visibility: visible
+}
+
+41% {
+visibility: hidden
+}
+
+42% {
+visibility: hidden
+}
+
+43% {
+visibility: visible
+}
+
+44% {
+visibility: visible
+}
+
+45% {
+visibility: hidden
+}
+
+46% {
+visibility: hidden
+}
+
+47% {
+visibility: visible
+}
+
+60% {
+visibility: visible
+}
+
+61% {
+visibility: hidden
+}
+
+64% {
+visibility: hidden
+}
+
+65% {
+visibility: visible
+}
+
+70% {
+visibility: visible
+}
+
+71% {
+visibility: hidden
+}
+
+72% {
+visibility: hidden
+}
+
+73% {
+visibility: visible
+}
+
+100% {
+visibility: visible
+}
+}
+@font-face {
+font-family: 'Cyberpunk 2077';
+src: url('Cyberpunk.ttf') format('truetype');
+}
+
+address {
+    color: yellow;
+    font-family: 'Cyberpunk 2077', sans-serif;
+    font-display: swap;
+    font-size: 50px;
+}
+
+hr {
+border: none;
+height: 3px;
+background: linear-gradient(to right, rgb(236, 37, 37), black 100%, red);
+}
+
+
+
+.fota{
+    margin-top: 3%;
+    margin-right: 8%;
+}
+
+.fota1{
+    margin-top: 20%;
+    margin-right: 10% ;
+}
+
+
+            * {
+    box-sizing: border-box;
+    }
+
+    body {
+    background: #cfd8dc;
+    font-family: 'Montserrat', sans-serif;
+    }
+
+    .card-1 {
+    width: 1400px;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 100px;
+    overflow: hidden;
+    }
+
+    .content {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    top: -50px;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 0 2rem;
+    text-align: center;
+    border-radius: 30px;
+    animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) 2s forwards;
+    }
+
+    @keyframes fadeIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    }
+
+    h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.7rem;
+    }
+
+    h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    }
+
+    .overlay {
+    position: absolute;
+    width: 50%;
+    height: 600px;
+    top: 0;
+    left: 400px;
+    transform-origin: 50% 50%;
+    mix-blend-mode: multiply;
+    border-radius: 800px;
+    background-color: rgba(109, 8, 8, 0.8);
+    opacity: 1;
+    animation-name: overlay-animation;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes overlay-animation {
+    0% {
+        width: 50%;
+        transform: scale(1);
+    }
+    100% {
+        width: 60%;
+        transform: scale(1.2);
+    }
+    }
+
+    .card-1:hover .overlay {
+    width: 60%;
+    transform: scale(1.2);
+    }
+
+    .card-1:hover .content {
+    transform: translateY(0);
+    opacity: 1;
+    }
+                
+
+                .cyber-glitch-0 {
+        animation: cyber-glitch-0 5s linear infinite
+    }
+
+    @keyframes cyber-glitch-0 {
+        0% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        2% {
+            filter: blur(.05rem) brightness(120%) contrast(120%)
+        }
+
+        4% {
+            filter: blur(.10rem) brightness(150%) contrast(150%)
+        }
+
+        6% {
+            filter: blur(.20rem) brightness(170%) contrast(170%)
+        }
+
+        8% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        10% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        60% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        62% {
+            filter: blur(.05rem) brightness(60%) contrast(100%)
+        }
+
+        64% {
+            filter: blur(.10rem) brightness(40%) contrast(100%)
+        }
+
+        66% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        68% {
+            filter: blur(.05rem) brightness(60%) contrast(100%)
+        }
+
+        70% {
+            filter: blur(.10rem) brightness(40%) contrast(100%)
+        }
+
+        72% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+
+        100% {
+            filter: blur(0) brightness(100%) contrast(100%)
+        }
+    }
+
+        .cyber-glitch-4 {
+        animation: cyber-glitch-4 5s linear infinite
+    }
+
+    @keyframes cyber-glitch-4 {
+        0% {
+            visibility: visible
+        }
+
+        1% {
+            visibility: hidden
+        }
+
+        2% {
+            visibility: hidden
+        }
+
+        3% {
+            visibility: visible
+        }
+
+        20% {
+            visibility: visible
+        }
+
+        21% {
+            visibility: hidden
+        }
+
+        24% {
+            visibility: hidden
+        }
+
+        25% {
+            visibility: visible
+        }
+
+        40% {
+            visibility: visible
+        }
+
+        41% {
+            visibility: hidden
+        }
+
+        42% {
+            visibility: hidden
+        }
+
+        43% {
+            visibility: visible
+        }
+
+        44% {
+            visibility: visible
+        }
+
+        45% {
+            visibility: hidden
+        }
+
+        46% {
+            visibility: hidden
+        }
+
+        47% {
+            visibility: visible
+        }
+
+        60% {
+            visibility: visible
+        }
+
+        61% {
+            visibility: hidden
+        }
+
+        64% {
+            visibility: hidden
+        }
+
+        65% {
+            visibility: visible
+        }
+
+        70% {
+            visibility: visible
+        }
+
+        71% {
+            visibility: hidden
+        }
+
+        72% {
+            visibility: hidden
+        }
+
+        73% {
+            visibility: visible
+        }
+
+        100% {
+            visibility: visible
+        }
+    }
+
+    .czciona{
+        font-family: 'Courier New', Courier, monospace
+    }
+
+
+    .media {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 20%;
+    right: 20px;
+    font-size: 62px;
+    }
+
+    .media a {
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+    }
+    
+    a {
+        text-decoration: none; 
+        color: black;
+    }
+
+
+
+    body {
+        margin: 0px;
+    }
+    
+    .baner, .stopka {
+        width: 100%;
+    }
+   
+    
+    .lewy img {
+       position: absolute;
+       max-width: 100%;
+       max-height: 100%;
+    }
+    
+    
+    
+    .prawy img{
+        max-width: 50%;
+        max-height: 50%;
+    }
+    
+    .stopka {
+        clear: both;
+        background-color: black;
+    }
+    
+    .baner{
+        position: absolute;
+        background-color:black;
+        padding: 10px;
+    }
+    
+    
+    .center {
+        float: center;
+        background: linear-gradient(to right, black 60%, red);
+    }
+
+    .button-container {
+        float: right;
+        justify-content: right;
+        margin-right: 50px;
+        margin-top: 2%;
+        text-align: right;
+        }
+
+
+        .button-container button {
+            flex: none;
+            white-space: nowrap;
+          }
+
+
+
+
+
+    .baner1, .stopka1 {
+        width: 100%;
+    }
+    
+    .center1 {
+        height: 2000px;
+        float: center;
+        background-color: white;
+    }
+
+
+    .down1 {
+        height: 2000px;
+        float: center;
+        background: linear-gradient(to right, black 40%, red);
+    }
+    
+    
+    .stopka1 {
+        clear: both;
+        background-color: black;
+    }
+    
+    .baner1 {
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+    }
+    
+    .button1-container {
+        float: right;
+        margin-top: 2%;
+        margin-right: 50px;
+        }
+
+        .button1-container button {
+            flex: none;
+            white-space: nowrap;
+          }
+       
+       
+
+    .baner2, .stopka2 {
+        width: 100%;
+    }
+    
+    .center2 {
+        height: 3000px;
+        float: center;
+        background: linear-gradient(to right, black, rgb(161, 14, 14), black);
+
+    }
+    
+    
+    .stopka2 {
+        clear: both;
+        background-color: black;
+    }
+    
+    .baner2 {
+        position: absolute;
+        background-color: black;
+        padding: 20px;
+    }
+    
+    .button2-container {
+        float: right;
+        margin-top: 2%;
+        margin-right: 50px;
+        }
+
+    .button2-container button {
+        flex: none; 
+        white-space: nowrap;
+    }
+       
+       
+
+
+
+
+
+
+
+
+
+    .baner3, .stopka3 {
+        width: 100%;
+    }
+    
+    .stopka3 {
+        clear: both;
+        background-color: black;
+    }
+    
+    .baner3 {
+        position: absolute;
+        background-color: black;
+        padding: 20px;
+    }
+    
+    .button3-container {
+        float: right;
+        margin-top: 1%;
+        margin-right: 50px;
+        }
+
+    .button3-container button {
+        flex: none; 
+        white-space: nowrap;
+    }
+       
+        
+    
+    
+    .top{
+
+        height: 900px;
+        float: center;
+        background-color: #831313
+    }
+
+
+
+    .center3 {
+        height: 800px;
+        float: center;
+        background-color: white
+    }
+
+
+
+    .down3{
+        height: 900px;
+        float: center;
+        background-color: #831313
+    }
+
+
+
+
+    
+    .baner4, .stopka4 {
+        width: 100%;
+    }
+    
+    .stopka3 {
+        clear: both;
+        background-color: black;
+    }
+    
+    .baner4 {
+        position: absolute;
+        background-color: black;
+        padding: 20px;
+    }
+    
+    .button4-container {
+        float: right;
+        margin-top: 1%;
+        margin-right: 50px;
+        }
+
+    .button4-container button {
+        flex: none; 
+        white-space: nowrap;
+    }
+    

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <link href="https://fonts.cdnfonts.com/css/callista-2" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="language" content="PL">
+  <meta name="author" content="Patryk Balicki">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css12.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="ikona9.jpg">
+  <title>Kartka Wielkanocna</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/callista-2%27');
+    .card:hover {
+  transform: perspective(1100px) rotateX(0deg);
+}
+    </style>
+</head>
+  <body>
+    <div class="card" id="card">
+        <div class="logo"></div>
+        <div class="content">
+          <div class="greetings">
+            <h1>Wesołych Świąt Wielkanocnych!</h1>
+            <p>Życzy</p>
+            <p>1 TP</p>
+          </div>
+          <div class="signature">
+            <p>Dla</p>
+            <p> Pana Waldemara Gardiasza</p>
+          </div>
+          <div class="basket"></div>
+          <img src="koszyk4.jpg">
+          <div class="trawa"></div>
+          <img src="trawa4.jpg">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const card = document.getElementById('card');
+      card.addEventListener('click', () => {
+        card.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>

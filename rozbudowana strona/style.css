@@ -1,0 +1,45 @@
+
+
+.header{
+    background-color: orange;
+    background-position: center top;
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    height: 100px;
+    border-radius:20px;
+    border: 2px greenyellow;
+    width:100;
+}
+.wcięcie{
+    text-indent: 60px;
+    font-size: 20px;
+    color: black;
+}
+.video{
+    width: 99%;
+    height: 700px;
+    margin: 0.5%;
+
+}   
+.photo{
+    width: 100%;  
+    text-align: center;
+   
+}  
+.ramka{
+    background-color: orange;
+    background-position: center bottom;
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    height: 100px;
+    border-radius:20px;
+    border: 2px greenyellow;
+    width:100;
+}
+.tlo{
+    background-image:url(tlo.jpg);
+}

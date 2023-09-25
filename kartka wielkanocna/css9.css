@@ -1,0 +1,158 @@
+body {
+  background-image: url("s9s1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.card {
+    background: linear-gradient(to bottom right, #FFFFCC, #99CC33);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    max-width: 600px;
+    max-height: 800px;
+    position: relative;
+    overflow: hidden; 
+    align-items: flex-end;
+    transform: perspective(1100px) rotateX(20deg);
+    transition: transform 0.8s ease-in-out;
+}
+    .card .front, .card .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .card .front {
+        background: linear-gradient(to bottom right, #FFFFCC, #99CC33);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+      }
+      .card .back {
+        background: linear-gradient(to bottom right, #FFFFCC, #99CC33);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+      }
+      .card.open {
+        transform: rotateY(180deg);
+      }
+      
+	  .card:before,
+	  .card:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		transform: rotate(7deg);
+		opacity: 0.5 ;
+		border-radius: 20px;
+		max-width: 150px;
+	  }
+	  
+	  .card:after {
+		bottom: 0;
+		right: -100px;
+		width: 200px;
+		height: 100%;
+		background-color: #99CC33; 
+	  }
+
+	
+  .trawa{
+    margin-top: -215px;
+    bottom: 102px;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  
+.basket {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("koszyk.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  .logo {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+  }
+  
+  .logo img {
+    width: 100%;
+  }
+  
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+  }
+  
+  .greetings {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+  }
+  
+  .greetings h1 {
+    font-size: 37px;
+    margin: 0;
+    text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.15);
+  }
+   
+  .greetings h1::after {
+    font-size: 37px;
+    margin: 0;
+    text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.15);
+  }
+  .greetings p {
+    font-size: 34px;
+    margin: 10px 0;
+    text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image {
+    margin: 50px 0;
+    position: relative;
+    width: 300px;
+  }
+  
+  .image img {
+    width: 100%;
+  }
+  
+  .signature {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+  }
+  
+  .signature p {
+    font-size: 34px;
+    margin: 10px 0;
+    text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.15);
+  }

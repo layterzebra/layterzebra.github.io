@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="language" content="PL">
+<meta name="author" content="Patryk Balicki">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link href="css8.css" rel="stylesheet">
+<link rel="shortcut icon" href="ikona8.png">
+<link href='http://fonts.googleapis.com/css?family=Amatic+SC&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/callista-2" rel="stylesheet">
+  <title>Menu</title>
+<style>
+
+	@import url('https://fonts.cdnfonts.com/css/callista-2%27');
+
+@media only screen and (min-width: 801px) {
+  .box {
+    max-height: 200px;
+    min-height: 150px;
+    max-width: 500px;
+    border-radius: 80px;
+    background-color: rgb(235, 148, 62);
+    flex-basis: calc(33.33% - 20px);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    float: left;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 30%);
+    background-position: left;
+    background-size: 200% 100%;
+    transition: background-position 1s ease-in-out;
+    border-color:#b66f05;
+    border-style:outset;
+  }
+
+  .box:hover {
+    transform: scale(1.5);
+    background-position: right;
+  }
+
+  .box:hover::before {
+    height: 100%;
+  }
+
+  
+  .box:hover .btn {
+    display: none;
+  }
+  
+  .box:last-child {
+    margin-right: 0;
+  }
+  
+  .box.active {
+    opacity: 1;
+  }
+  .box:hover ~ .overlay {
+    opacity: 0.5; 
+    pointer-events: auto; 
+  }
+}
+
+
+
+.text-overlay {
+  position: absolute;
+  font-family: 'Callista', sans-serif;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  display: none; 
+  z-index: 3;
+}
+
+@media screen and (max-width: 960px) {
+  .text-overlay {
+    display: block;
+  }
+  
+  .text-overlay1 {
+    display: none;
+  }
+}
+
+.text-overlay1 {
+  position: absolute;
+  font-family: 'Callista', sans-serif;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 80px;
+}
+
+
+
+.parallax {
+    height: 100%;
+    background-image: url('s8s1.jpg'), url('s8s1.jpg');
+    background-size: cover;
+    background-position: center, center 100%;
+    background-attachment: fixed, fixed;
+    transition: background-position 0.5s ease-in-out;
+  }
+
+  .container10 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    margin: 10px;
+  }
+
+  
+  
+ .frame {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+  }
+
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  :root {
+    --primary-color: rgba(235, 122, 17, 0.75);
+    --overlay-color: rgba(212, 100, 9, 0.85);
+    --menu-speed: 0.75s;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: '';
+  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  font-size: 3.5rem;
+  padding: 1rem;
+  z-index: 5;
+
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  z-index: 5;
+
+}
+  
+@media only screen and (min-width: 960px) {
+.container,
+.menu-wrap {
+display: none;
+}
+}
+
+@media only screen and (max-width: 960px) {
+.container,
+.menu-wrap {
+display: block;
+}
+}
+
+
+@media (max-width: 960px) {
+.box,
+.arrow-down,
+.container10{
+display: none;
+}
+}
+
+@media (max-width: 960px) {
+.button-container{
+display: none;
+}
+}
+
+.arrow-down {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow-down:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  border-top: 10px solid rgb(0, 0, 0);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.arrow-down:hover {
+  transform: scale(1.5);
+  border: 2px solid rgb(235, 88, 2); 
+}
+
+</style>
+</head>
+<body>
+
+ 
+
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="s8s1.html">Dyscyplina</a></li>
+            <li><a href="s8s2.html">Film</a></li>
+            <li><a href="s8s3.html">Ulubiony Gracz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="button-container">
+        <button id="button1"><a href="html8.txt">HTML</a></button>
+        <button id="button2"><a href="css8.txt">CSS</a></button>
+      </div>
+        <div class="text-overlay">Mój Ulubiony Sport</div>
+
+        <div class="text-overlay1">Mój Ulubiony Sport</div>
+        <div class="frame">
+           <img src="s8s2.jpg">
+         </div>
+   <div class="parallax"></div>
+   <div class="container10">
+    <div class="box">
+        <a href="s8s1.html" target="_blank"> <h1>Dyscyplina</h1></a>
+        <div class="background-text"></div>
+    </div>
+       <div class="box">
+        <a href="s8s2.html" target="_blank"><h1>Film</h1></a>
+        <div class="background-text"></div>
+    </div>
+       <div class="box">
+           <a href="s8s3.html" target="_blank"><h1>Ulubiony Gracz</h1></a>
+           <div class="background-text"></div>
+       </div>
+   </div>
+
+   <a href="#" class="arrow-down"></a>
+
+<script>
+  var arrow = document.querySelector(".arrow-down");
+
+ arrow.addEventListener("click", function() {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+});
+</script>
+
+</body>
+</html>

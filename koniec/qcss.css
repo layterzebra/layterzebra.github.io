@@ -1,0 +1,72 @@
+body {
+  background-image: url('qzd.png');
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  perspective: 1000px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.front {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.back {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+  transition: transform 1s;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.signature {
+  font-style: italic;
+  margin-top: 20px;
+}
+

@@ -1,0 +1,86 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Moja Strona</title>
+    <style>  
+    
+    
+    </style>
+</head>
+<body>
+    
+    <header>
+     
+        <h1>Menu Główne</h1>
+        <h2>
+            <div class="media">
+            <a href="https://www.facebook.com/PatrykBalicki313" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://twitter.com/LayterZebra" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/layter_zebra/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.youtube.com/@layterzebra1162/featured" class="fa fa-youtube" target="_blank"></a>
+            <a href="https://www.twitch.tv/layterzebra" class="fa fa-twitch" target="_blank"></a>
+            </div></h2>
+        <div class="clockdate-wrapper">
+            <div id="clock"></div>
+            <div id="date"></div>
+        </div>
+ </header>
+<nav>
+
+</nav>
+    <div class="container">
+        <div class="button-row">
+            <div class="button-wrapper">
+                <a href="/menu klasa 1/index.html" class="button-link">
+                    <button class="button">1 TP</button>
+                </a>
+            </div>
+            <div class="button-wrapper">
+                <a href="/menu klasa 2/index.html" class="button-link">
+                    <button class="button">2 TP</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; <address>Patryk Balicki <span class="cyber-glitch-3">_</span></address>
+    </footer>
+
+    <script>
+        function startTime() {
+            var today = new Date();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+            hr = (hr == 0) ? 12 : hr;
+            hr = (hr > 12) ? hr - 12 : hr;
+            hr = checkTime(hr);
+            min = checkTime(min);
+            sec = checkTime(sec);
+            document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+
+            var months = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
+            var days = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
+            var curWeekDay = days[today.getDay()];
+            var curDay = today.getDate();
+            var curMonth = months[today.getMonth()];
+            var curYear = today.getFullYear();
+            var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
+            document.getElementById("date").innerHTML = date;
+
+            var time = setTimeout(function () { startTime() }, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        startTime(); 
+    </script>
+</body>
+</html>       

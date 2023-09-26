@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="language" content="PL">
+  <meta name="author" content="Patryk Balicki">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link href="sss.css" rel="stylesheet">
+  <link rel="shortcut icon" href="infa.jpg">
+  <link href="https://fonts.cdnfonts.com/css/callista-2" rel="stylesheet">
+  <title>Dying Light</title>
+
+<style>
+		@import url('https://fonts.cdnfonts.com/css/callista-2%27');
+
+  .box {
+    max-height: 200px;
+    min-height: 150px;
+    max-width: 500px;
+    border-radius: 80px;
+    background-color: linear-gradient(to right, black, rgba(255, 255, 255, 0.281) );
+    flex-basis: calc(33.33% - 20px);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    float: left;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 29%);
+    background-position: left;
+    background-size: 200% 100%;
+    transition: background-position 1s ease-in-out;
+    border-color: gray;
+    border-style:outset;
+  }
+
+  .box:hover {
+    transform: scale(1.15);
+    background-position: right;
+  }
+
+  .box:hover::before {
+    height: 100%;
+  }
+
+  
+  .box:hover .btn {
+    display: none;
+  }
+  
+  .box:last-child {
+    margin-right: 0;
+  }
+  
+  .box.active {
+    opacity: 1;
+  }
+  .box:hover ~ .overlay {
+    opacity: 0.5; 
+    pointer-events: auto; 
+  }
+
+.parallax {
+    height: 100%;
+    background-image: url('sss3.jpg'), url('sss3.jpg');
+    background-size: cover;
+    background-position: center, center 100%;
+    background-attachment: fixed, fixed;
+    transition: background-position 0.5s ease-in-out;
+  }
+
+  .container10 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    margin: 10px;
+  }
+.czciona1 {
+  font-size: 150px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-family: 'Callista', sans-serif;
+  text-align: center;
+}
+.text-overlay {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Callista', sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+    font-size: 80px;
+  }
+
+
+</style>
+</head>
+<body>
+  
+  <div class="text-overlay">Dying Light</div>
+
+      <div class="framet">
+      <div class="czciona1"></div>
+      "Dying Light" to gra akcji i horroru, która oferuje niezapomniane wrażenia i emocje. Gra stworzona została przez studio Techland, które już wcześniej zasłynęło z serii "Dead Island". Jednakże, "Dying Light" to o wiele bardziej zaawansowana i kompletna produkcja.
+
+      Gracz wciela się w postać agenta wywiadu, który zostaje wysłany do fikcyjnego miasta Harran, by pomóc w walce z epidemią, która zamienia ludzi w zombie. Gracz musi przemierzać miasto, zbierać surowce, walczyć z wrogami i odkrywać tajemnice, które skrywa Harran.
+      
+      Grafika i dźwięk w grze są niesamowite. Miasto Harran zostało bardzo szczegółowo odtworzone, a wizualizacja postaci i stworzeń jest bardzo realistyczna. Muzyka i dźwięki otoczenia dodają do napięcia i klimatu grozy, co wprowadza gracza w odpowiedni nastrój.
+      
+      Rozgrywka w "Dying Light" jest bardzo dynamiczna i wymaga nie tylko szybkiego myślenia, ale również zręczności i sprytu. Gracz może korzystać z różnych broni, ale też biegać, skakać i wspinac się po budynkach. Co więcej, gra oferuje tryb kooperacji, który pozwala na rozgrywkę z innymi graczami.
+      
+      Jedyną wadą gry może być to, że czasami bywa zbyt trudna. Niektóre misje wymagają od gracza wielu podejść i prób, co może być frustrujące. Jednakże, to właśnie to sprawia, że "Dying Light" jest tak wciągająca i emocjonująca.
+      
+      Podsumowując, "Dying Light" to świetna gra akcji i horroru, która dostarcza niesamowitych wrażeń. Grafika, dźwięk, i rozgrywka są na bardzo wysokim poziomie, co sprawia, że gra jest wartą uwagi produkcją.
+       </div>
+       </div>
+
+
+   
+       <div class="parallax"><button id="button1"><a href="indexss.html">Menu</a></button>
+       </div>
+   </div>
+   <div class="container10">
+    <div class="box">
+        <a href="sss1.html"> <h1>Wiedźmin</h1></a>
+        <div class="background-text"></div>
+    </div>
+       <div class="box">
+        <a href="sss2.html"><h1>Dying Lgiht</h1></a>
+        <div class="background-text"></div>
+    </div>
+       <div class="box">
+           <a href="sss3.html"><h1>Assasin's creed</h1></a>
+           <div class="background-text"></div>
+       </div>
+   </div>
+   
+</body>
+</html>

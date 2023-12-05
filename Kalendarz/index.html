@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendarz</title>
+    <link rel="shortcut icon" href="zdjecia/zd1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffeeee; 
+            text-align: center;
+            margin: 50px 40px; 
+            overflow: hidden; 
+        }
+
+        h1 {
+            color: #ff6347; 
+        }
+
+        .day {
+            background-color: #fddede; 
+            border: 1px solid #e8b2b2; 
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .day:hover {
+            background-color: #fccccc; 
+        }
+
+        .wish-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .wish {
+            font-style: italic;
+            margin-top: 10px;
+            color: #975656; 
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .snowfall-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999; 
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Kalendarz Adwentowy</h1>
+
+        <div id="calendar" class="row"></div>
+
+        <div class="wish-container" id="wishContainer"></div>
+        
+        <div class="snowfall-container">
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarContainer = document.getElementById('calendar');
+            const wishContainer = document.getElementById('wishContainer');
+            let currentWish = null;
+
+            const wishes = [
+                "Wesołych Świąt!",
+                "Niech gwiazdka Betlejemska przyniesie Ci radość i szczęście.",
+                "Z okazji Bożego Narodzenia życzymy spokojnych i ciepłych chwil w gronie rodziny.",
+                "Życzymy Ci magicznych chwil i niezapomnianych wspomnień w tym świątecznym czasie.",
+                "Niech Nowy Rok przyniesie wiele sukcesów i spełnionych marzeń."
+            ];
+
+            for (let day = 1; day <= 24; day++) {
+                const button = document.createElement('button');
+                button.classList.add('day', 'col-md-3', 'mb-3');
+                button.textContent = day;
+
+                button.addEventListener('click', function () {
+                    const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+                    const content = `Day ${day}: ${randomWish}`;
+                    const wish = document.createElement('p');
+                    wish.classList.add('wish');
+                    wish.textContent = content;
+
+                    if (currentWish) {
+                        wishContainer.removeChild(currentWish);
+                    }
+
+                    wishContainer.appendChild(wish);
+                    currentWish = wish;
+                });
+
+                calendarContainer.appendChild(button);
+            }
+
+            const snowflakeContainer = document.querySelector('.snowfall-container');
+            const numberOfSnowflakes = 50; 
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                snowflakeContainer.appendChild(snowflake);
+            }
+        });
+    </script>
+</body>
+</html>

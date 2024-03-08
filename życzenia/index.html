@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dzień Kobiet</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background-color: #ff69b4;
+      border-color: #ff69b4;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+    }
+
+    .btn-primary:hover {
+      background-color: #e65c9f;
+      border-color: #e65c9f;
+    }
+
+    .wish {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      color: #444;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .wish.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Wszystkiego Najlepszego z Okazji Dnia Kobiet!</h2>
+      <p>Dziękujemy za Waszą siłę, mądrość i piękno.</p>
+      <button id="btnWish" class="btn btn-primary">Kliknij, aby zobaczyć życzenia</button>
+      <p id="wishes" class="wish"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    document.getElementById('btnWish').addEventListener('click', function() {
+      var wishes = [
+        "Niech Twój dzień będzie pełen uśmiechu i radości!",
+        "Jesteś niezwykła! Nie zapominaj o tym, kochana!",
+        "Życzymy Ci, aby każdy dzień był pełen pozytywnych niespodzianek!",
+        "Dziękujemy Ci za Twoją wyjątkową siłę i determinację!",
+        "Dla Ciebie, najpiękniejsza ze wszystkich kobiet, tylko to, co najlepsze!"
+      ];
+      var randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+      var wishesElement = document.getElementById('wishes');
+      wishesElement.textContent = randomWish;
+      wishesElement.classList.add('show');
+    });
+  </script>
+</body>
+</html>

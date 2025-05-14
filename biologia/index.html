@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprawdź zwoje znamię !</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contener">
+    <h1>Sprawdź znamiona </br>(zasada ABCDE)</h1>
+    <form id="quiz">
+
+      <div class="pytanie">
+        <label for="A">A - Asymetria: Czy znamię jest asymetryczne?</label>
+        <select id="A" name="A">
+          <option value="0">Nie</option>
+          <option value="1">Tak</option>
+        </select>
+      </div>
+
+      <div class="pytanie">
+        <label for="B">B - Brzegi: Czy brzegi są poszarpane lub nierówne?</label>
+        <select id="B" name="B">
+          <option value="0">Nie</option>
+          <option value="1">Tak</option>
+        </select>
+      </div>
+
+      <div class="pytanie">
+        <label for="C">C - Kolor: Czy kolor jest nieregularny lub atypowy?</label>
+        <select id="C" name="C">
+          <option value="0">Nie</option>
+          <option value="1">Tak</option>
+        </select>
+      </div>
+
+      <div class="pytanie">
+        <label for="D">D - Średnica: Czy średnica przekracza 6 mm?</label>
+        <select id="D" name="D">
+          <option value="0">Nie</option>
+          <option value="1">Tak</option>
+        </select>
+      </div>
+
+      <div class="pytanie">
+        <label for="E">E - Ewolucja: Czy znamię się zmienia (rozmiar, kształt, swędzenie)?</label>
+        <select id="E" name="E">
+          <option value="0">Nie</option>
+          <option value="1">Tak</option>
+        </select>
+      </div>
+
+      <button type="button" id="sprawdz">Sprawdź ryzyko</button>
+    </form>
+
+    <div id="wynik" class="wynik"></div>
+  </div>
+
+ <script>
+  var przycisk = document.getElementById('sprawdz');
+  var quiz = document.getElementById('quiz');
+  var wynik = document.getElementById('wynik');
+
+  function obliczSume() {
+    var wybory = quiz.getElementsByTagName('select');
+    var suma = 0;
+    for (var i = 0; i < wybory.length; i++) {
+      suma += parseInt(wybory[i].value);
+    }
+    return suma;
+  }
+
+  function okresRyzyko(suma) {
+    var komunikat = '';
+    var klasa = '';
+
+    if (suma >= 4) {
+      komunikat = 'Wysokie ryzyko – pilna konsultacja z dermatologiem!';
+      klasa = 'ryzyko-wysokie';
+    } else if (suma >= 2) {
+      komunikat = 'Umiarkowane ryzyko – warto skonsultować się z dermatologiem.';
+      klasa = 'ryzyko-srednie';
+    } else {
+      komunikat = 'Niskie ryzyko – pamiętaj o regularnych samobadaniach.';
+      klasa = 'ryzyko-niskie';
+    }
+
+    return { komunikat: komunikat, klasa: klasa };
+  }
+
+  przycisk.onclick = function() {
+    var suma = obliczSume();
+    var wynikRyzyka = okresRyzyko(suma);
+
+    wynik.className = 'wynik ' + wynikRyzyka.klasa;
+    wynik.textContent = wynikRyzyka.komunikat;
+  };
+</script>
+</body>
+</html>

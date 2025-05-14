@@ -1,0 +1,106 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #c8ebec, #a6d5f1);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.contener {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #1d3557;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pytanie {
+  background: linear-gradient(to bottom, #afe7e9, #74c7e7);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+legend {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1d3557;
+  font-size: 1.1em;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #457b9d;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #1d3557;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #a8dadc;
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #c4151c;
+  transform: scale(1.05);
+}
+
+.wynik {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ryzyko-wysokie {
+  background-color: #fde0e0;
+  border: 2px solid #e53935;
+  color: #e53935;
+}
+
+.ryzyko-srednie {
+  background-color: #fff9c4;
+  border: 2px solid #fdd835;
+  color: #d89b00;
+}
+
+.ryzyko-niskie {
+  background-color: #e8f5e9;
+  border: 2px solid #4caf50;
+  color: #43a047;
+}
